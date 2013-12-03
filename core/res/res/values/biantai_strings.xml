@@ -70,4 +70,8 @@
     <!-- 确认重启后, 重启过程中弹出的对话框文字 -->
     <string name="reboot_progress">Rebooting\u2026</string>
 
+    <!-- Immersive mode confirmation: Pick confirmation window from bottom when status bar is visible -->
+    <!-- 沉浸模式确认: 当通知栏可见时 确认窗口会从屏幕下端弹出 -->
+    <string name="immersive_mode_confirmation_bottom">Swipe up from the bottom to exit full screen.</string>
+
 </resources>
