@@ -62,5 +62,19 @@
     <!-- 快捷设置磁贴: 电池 -->
     <string name="quick_settings_battery_charging">Charging</string>
     <string name="quick_settings_battery_discharging">Discharging</string>
+    <!-- QuickSettings tile: LTE On -->
+    <!-- 快捷设置磁贴: LTE开启 -->
+    <string name="quick_settings_lte">LTE</string>
+    <!-- QuickSettings tile: LTE Off -->
+    <!-- 快捷设置磁贴: LTE关闭 -->
+    <string name="quick_settings_lte_off">LTE Off</string>
+    <!-- QuickSettings tile: Mobile Network (2G/3G) -->
+    <!-- 快捷设置磁贴: 蜂窝数据 (2G/3G) -->
+    <string name="quick_settings_network_type">Network</string>
+    <string name="quick_settings_network_unknown">Unknown</string>
+    <!-- QuickSettings tile: Lightbulb -->
+    <!-- 快捷设置磁贴: Lightbulb -->
+    <string name="quick_settings_lightbulb_label">Lightbulb</string>
+    <string name="quick_settings_lightbulb_off_label">Lightbulb off</string>
 
 </resources>
