@@ -2530,6 +2530,13 @@ public final class Settings {
         public static final String VOLBTN_MUSIC_CONTROLS = "volbtn_music_controls";
 
         /**
+         * Determine if AOSP dialer is used
+         * 判断用户是否使用AOSP电话
+         * @hide
+         */
+        public static final String AOSP_DIALER = "aosp_dialer";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
