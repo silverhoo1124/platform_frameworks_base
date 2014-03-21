@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+                         $$$$$$$$$$$$$$$
+                      $$$$$$        $$  $$$$
+                     $$$             $     $$$
+                   $$$$$$$          $$$      $$$
+                  $$$$ $$$$        $$          $$$
+                 $$$      $$       $            $$$
+     FFFF       $$$$     $$                $$$    $$
+    UUUUUU     $$$  $$$$$$              $$$$$$$$$  $$
+               $$$                     $$     $$$  $$
+               $$    $$$$$$$$$         $$      $$  $$
+                $$ $$  $$$ $$$$$$$$$     $$$$$$    $$
+                 $ $$      $$$  $$  $$$           $$
+  $$$             $$$              $$  $$        $$$
+   $$$$             $$$$$$$            $$      $$$
+ $$$$$$$$$$$         $$$  $$$$$       $$     $$$$
+    $$$  $$$$$$$$$   $$$     $$$$$   $$  $$$$$
+  $$$$        $$$$$$$$$$$$$$$    $$$$$$$$$$$$
+ $$$$               $$$     $$$$$$$$$$$
+      $$           $$$            $$$
+        $$        $$$            $$$
+        $$$$$$$$$$$$$$$$$$       $$$
+     $$$$$$$$     $$$$$$$$$$$$$  $$
+        $$$$      $$$            $$
+       $$$        $$            $$$
+                  $$            $$$
+                  $$$$$$$$$$$$$$$$$
+                   $$$$$$$$$$$$$$$
+                     $$$       $$$
+                    $$$         $$$
+                   $$$           $$$
+                  $$$             $$$
+                 $$$               $$$
+                $$$                 $$$
+               $$$                   $$$
+            $$$$$                    $$$$
+           $$$$$$                    $$$
+                                   $$$$
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Defines the shutdown options shown in the reboot dialog. -->
+    <!-- 定义了"重新启动"对话框中的选项. -->
+    <string-array name="shutdown_reboot_options" translatable="false">
+        <item>@string/reboot_normal</item>
+        <item>@string/reboot_recovery</item>
+        <item>@string/reboot_fastboot</item>
+    </string-array>
+
+    <!-- Defines the shutdown actions passed to the kernel.
+         The first item should be empty for normal reboot. -->
+    <!-- 定义了传递给内核的命令.
+         第一项为标准重启, 留空. -->
+    <string-array name="shutdown_reboot_actions" translatable="false">
+        <item></item>
+        <item>recovery</item>
+        <item>bootloader</item>
+    </string-array>
+
+    <array name="shutdown_reboot_icons">
+        <item>@drawable/ic_lock_reboot</item>
+        <item>@drawable/ic_lock_reboot_recovery</item>
+        <item>@drawable/ic_lock_reboot_bootloader</item>
+    </array>
+
+</resources>

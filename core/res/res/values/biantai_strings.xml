@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+                         $$$$$$$$$$$$$$$
+                      $$$$$$        $$  $$$$
+                     $$$             $     $$$
+                   $$$$$$$          $$$      $$$
+                  $$$$ $$$$        $$          $$$
+                 $$$      $$       $            $$$
+     FFFF       $$$$     $$                $$$    $$
+    UUUUUU     $$$  $$$$$$              $$$$$$$$$  $$
+               $$$                     $$     $$$  $$
+               $$    $$$$$$$$$         $$      $$  $$
+                $$ $$  $$$ $$$$$$$$$     $$$$$$    $$
+                 $ $$      $$$  $$  $$$           $$
+  $$$             $$$              $$  $$        $$$
+   $$$$             $$$$$$$            $$      $$$
+ $$$$$$$$$$$         $$$  $$$$$       $$     $$$$
+    $$$  $$$$$$$$$   $$$     $$$$$   $$  $$$$$
+  $$$$        $$$$$$$$$$$$$$$    $$$$$$$$$$$$
+ $$$$               $$$     $$$$$$$$$$$
+      $$           $$$            $$$
+        $$        $$$            $$$
+        $$$$$$$$$$$$$$$$$$       $$$
+     $$$$$$$$     $$$$$$$$$$$$$  $$
+        $$$$      $$$            $$
+       $$$        $$            $$$
+                  $$            $$$
+                  $$$$$$$$$$$$$$$$$
+                   $$$$$$$$$$$$$$$
+                     $$$       $$$
+                    $$$         $$$
+                   $$$           $$$
+                  $$$             $$$
+                 $$$               $$$
+                $$$                 $$$
+               $$$                   $$$
+            $$$$$                    $$$$
+           $$$$$$                    $$$
+                                   $$$$
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Label for item that reboots the device in device options dialog -->
+    <!-- 电源菜单中的"重新启动"按钮 -->
+    <string name="global_action_reboot">Reboot</string>
+    <!-- Label for item that screenshots in device options dialog -->
+    <!-- 电源菜单中的"屏幕截图"按钮 -->
+    <string name="global_action_screenshot">Screenshot</string>
+
+    <!-- Button to reboot the device, within the reboot options dialog -->
+    <!-- "重新启动"对话框中的标准重启按钮 -->
+    <string name="reboot_normal">@string/global_action_reboot</string>
+    <!-- Button to reboot the device into recovery, within the reboot options dialog -->
+    <!-- "重新启动"对话框中的重启至恢复模式按钮 -->
+    <string name="reboot_recovery">Recovery</string>
+    <!-- Button to reboot the device into fastboot, within the reboot options dialog -->
+    <!-- "重新启动"对话框中的重启至Fastboot模式按钮 -->
+    <string name="reboot_fastboot">Fastboot</string>
+
+    <!-- Reboot confirmation dialog title -->
+    <!-- 确认重启的对话框标题 -->
+    <string name="reboot_system" product="tablet">Reboot Nexus</string>
+    <string name="reboot_system" product="default">Reboot Nexus</string>
+    <!-- Reboot confirmation dialog.  This is the message shown to the user when he chooses to reboot the device -->
+    <!-- 确认重启的对话框文字 -->
+    <string name="reboot_confirm" product="tablet">Your Nexus will reboot.</string>
+    <string name="reboot_confirm" product="default">Your Nexus will reboot.</string>
+
+    <!-- Reboot progress dialog. This is shown if the user chooses to reboot the device. -->
+    <!-- 确认重启后, 重启过程中弹出的对话框文字 -->
+    <string name="reboot_progress">Rebooting\u2026</string>
+
+</resources>
