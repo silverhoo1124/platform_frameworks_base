@@ -2439,6 +2439,17 @@ public final class Settings {
         public static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
 
         /**
+         * Various battery styles options
+         * 多种电池图标样式选项
+         * 0 = battery bar / 原生图标
+         * 1 = battery bar with percentage / 原生图标+百分比
+         * 2 = battery circle / 圆圈图标
+         * 3 = battery circle with percentage / 圆圈图标+百分比
+         * @hide
+         */
+        public static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
