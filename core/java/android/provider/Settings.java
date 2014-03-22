@@ -2416,6 +2416,22 @@ public final class Settings {
         public static final String EGG_MODE = "egg_mode";
 
         /**
+         * Immersive mode global actions switch
+         * (强制)沉浸模式开关
+         * 0 = no / 关
+         * 1 = yes / 开
+         * @hide
+         */
+        public static final String IMMERSIVE_MODE = "immersive_mode";
+
+        /**
+         * Quick settings tiles to show on status bar
+         * 快捷设置面板磁贴
+         * @hide
+         */
+        public static final String QUICK_SETTINGS_TILES = "quick_settings_tiles";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
