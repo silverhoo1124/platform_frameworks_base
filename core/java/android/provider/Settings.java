@@ -2471,6 +2471,16 @@ public final class Settings {
         public static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
 
         /**
+         * Enable volume adjust sound, the sound made when you adjust volume with volume rocker.
+         * 启用音量调整音, 这是当你用音量键调整音量时发出的声音.
+         * 0 = disabled / 禁用
+         * 1 = enabled / 启用
+         * Default = 1 / 默认启用
+         * @hide
+         */
+        public static final String VOLUME_ADJUST_SOUNDS_ENABLED = "volume_adjust_sounds_enabled";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
