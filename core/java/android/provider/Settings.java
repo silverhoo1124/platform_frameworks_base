@@ -2505,6 +2505,31 @@ public final class Settings {
         public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
 
         /**
+         * Volume rockers control cursor in text fields
+         * 在输入框中 可用音量键可调整光标
+         * 0 = disabled / 禁用
+         * 1 = volume up/down moves cursor left/right / 音量上左移, 音量下右移
+         * 2 = volume up/down moves cursor right/left / 音量上右移, 音量下左移
+         * Default = 0 / 默认禁用
+         * @hide
+         */
+        public static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
+        
+        /**
+         * Boolean value whether to wake the screen with the volume rocker
+         * 定义是否可用音量键唤醒屏幕的布尔值
+         * @hide
+         */
+        public static final String VOLUME_WAKE_SCREEN = "volume_wake_screen";
+
+        /**
+         * Whether or not volume rocker music controls should be enabled to seek media tracks
+         * 定义是否可用音量键来调整音乐播放的曲目
+         * @hide
+         */
+        public static final String VOLBTN_MUSIC_CONTROLS = "volbtn_music_controls";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
