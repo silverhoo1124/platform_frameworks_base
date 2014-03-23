@@ -1853,18 +1853,35 @@ public final class Settings {
         public static final String ALWAYS_FINISH_ACTIVITIES = Global.ALWAYS_FINISH_ACTIVITIES;
 
         /**
+         * Volume adjust overlay style, values as follows
+         * 音量调整弹出框的样式, 数值对应的样式如下
+         * Defaults = 0 - which is single as native style
+         * 默认数值为0 - 即原生单行样式
+         * @hide
+         */
+        public static final String MODE_VOLUME_OVERLAY = "mode_volume_overlay";
+        /** @hide */
+        public static final int VOLUME_OVERLAY_SINGLE = 0;
+        /** @hide */
+        public static final int VOLUME_OVERLAY_EXPANDABLE = 1;
+        /** @hide */
+        public static final int VOLUME_OVERLAY_EXPANDED = 2;
+        /** @hide */
+        public static final int VOLUME_OVERLAY_NONE = 3;
+
+        /**
          * Determines which streams are affected by ringer mode changes. The
          * stream type's bit should be set to 1 if it should be muted when going
          * into an inaudible ringer mode.
          */
         public static final String MODE_RINGER_STREAMS_AFFECTED = "mode_ringer_streams_affected";
 
-         /**
-          * Determines which streams are affected by mute. The
-          * stream type's bit should be set to 1 if it should be muted when a mute request
-          * is received.
-          */
-         public static final String MUTE_STREAMS_AFFECTED = "mute_streams_affected";
+        /**
+         * Determines which streams are affected by mute. The
+         * stream type's bit should be set to 1 if it should be muted when a mute request
+         * is received.
+         */
+        public static final String MUTE_STREAMS_AFFECTED = "mute_streams_affected";
 
         /**
          * Whether vibrate is on for different events. This is used internally,
@@ -2479,6 +2496,13 @@ public final class Settings {
          * @hide
          */
         public static final String VOLUME_ADJUST_SOUNDS_ENABLED = "volume_adjust_sounds_enabled";
+
+        /**
+         * Boolean value whether to link ringtone and notification volumes
+         * 定义是否保持铃声和通知音量相同的布尔值
+         * @hide
+         */
+        public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
