@@ -2458,6 +2458,8 @@ public final class Settings {
          * (强制)沉浸模式开关
          * 0 = no / 关
          * 1 = yes / 开
+         * 2 = hide navigation bar / 隐藏导航栏
+         * 3 = hide status bar / 隐藏通知栏
          * @hide
          */
         public static final String IMMERSIVE_MODE = "immersive_mode";
