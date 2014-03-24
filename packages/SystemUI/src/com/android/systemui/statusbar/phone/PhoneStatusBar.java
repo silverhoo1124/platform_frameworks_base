@@ -230,7 +230,6 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode {
     View mDateTimeView;
     View mClearButton;
     ImageView mSettingsButton, mNotificationButton, mEditModeButton;
-    boolean mAnimatingEditModeButton;
 
     // carrier/wifi label
     private TextView mCarrierLabel;
@@ -2175,8 +2174,9 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode {
     private void checkBarModes() {
         if (mDemoMode) return;
         int sbMode = mStatusBarMode;
-        if (panelsEnabled() && (mInteractingWindows & StatusBarManager.WINDOW_STATUS_BAR) != 0) {
-            // if panels are expandable, force the status bar opaque on any interaction
+        if (panelsEnabled() && !mHasFlipSettings &&
+        (mInteractingWindows & StatusBarManager.WINDOW_STATUS_BAR) != 0) {
+            // if dual panels are expandable, force the status bar opaque on any interaction
             sbMode = MODE_OPAQUE;
         }
         checkBarMode(sbMode, mStatusBarWindowState, mStatusBarView.getBarTransitions());
@@ -2665,15 +2665,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode {
     private View.OnClickListener mEditModeButtonListener = new View.OnClickListener() {
         public void onClick(View v) {
             final boolean enabled = mSettingsContainer.isEditModeEnabled();
-            if(mAnimatingEditModeButton) return;
-            mAnimatingEditModeButton = true;
-            mEditModeButton.animate().rotationYBy(180)
-                    .setListener(new AnimatorListenerAdapter() {
-                        public void onAnimationEnd(Animator animation) {
-                            mSettingsContainer.setEditModeEnabled(!enabled);
-                            mAnimatingEditModeButton = false;
-                        }
-                });
+            mSettingsContainer.setEditModeEnabled(!enabled);
         }
     };
 

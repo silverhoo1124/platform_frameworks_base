@@ -158,6 +158,12 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     static public final String SYSTEM_DIALOG_REASON_HOME_KEY = "homekey";
     static public final String SYSTEM_DIALOG_REASON_ASSIST = "assist";
 
+    // Immersive states
+    private static final int IMMERSIVE_MODE_OFF = 0;
+    private static final int IMMERSIVE_MODE_FULL = 1;
+    private static final int IMMERSIVE_MODE_HIDE_ONLY_NAVBAR = 2;
+    private static final int IMMERSIVE_MODE_HIDE_ONLY_STATUSBAR = 3;
+
     /**
      * These are the system UI flags that, when changing, can cause the layout
      * of the screen to change.
@@ -379,7 +385,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     // What we last reported to system UI about whether the compatibility
     // menu needs to be displayed.
     boolean mLastFocusNeedsMenu = false;
-    // Immersive mode(s)
+    // Immersive
     int mImmersiveModeStyle = 0;
 
     FakeWindow mHideNavFakeWindow = null;
@@ -520,6 +526,39 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             setHdmiPlugged("1".equals(event.get("SWITCH_STATE")));
         }
     };
+
+    // Sleep tile long action receiver
+    PowerMenuReceiver mPowerMenuReceiver;
+    class PowerMenuReceiver extends BroadcastReceiver {
+        private boolean mIsRegistered = false;
+
+        public PowerMenuReceiver(Context context) {
+        }
+        @Override
+        public void onReceive(Context context, Intent intent) {
+           final String action = intent.getAction();
+            if (action.equals(Intent.ACTION_POWERMENU)) {
+                showGlobalActionsDialog();
+            }
+        }
+
+        private void registerSelf() {
+            if (!mIsRegistered) {
+                mIsRegistered = true;
+
+                IntentFilter filter = new IntentFilter();
+                filter.addAction(Intent.ACTION_POWERMENU);
+                mContext.registerReceiver(mPowerMenuReceiver, filter);
+            }
+        }
+
+        private void unregisterSelf() {
+            if (mIsRegistered) {
+                mIsRegistered = false;
+                mContext.unregisterReceiver(this);
+            }
+        }
+    }
 
     class SettingsObserver extends ContentObserver {
         SettingsObserver(Handler handler) {
@@ -1012,6 +1051,9 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         } else {
             screenTurnedOff(WindowManagerPolicy.OFF_BECAUSE_OF_USER);
         }
+
+        mPowerMenuReceiver = new PowerMenuReceiver(context);
+        mPowerMenuReceiver.registerSelf();
     }
 
     /**
@@ -2607,6 +2649,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     public int adjustSystemUiVisibilityLw(int visibility) {
         mStatusBarController.adjustSystemUiVisibilityLw(mLastSystemUiFlags, visibility);
         mNavigationBarController.adjustSystemUiVisibilityLw(mLastSystemUiFlags, visibility);
+        updateSystemUiVisibilityLw(); // Thanks @David96 for this catch.
 
         // Reset any bits in mForceClearingStatusBarVisibility that
         // are now clear.
@@ -3399,18 +3442,18 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     }
 
     private int updateWindowManagerVisibilityFlagsForImmersiveModes(int vis) {
-        if (mImmersiveModeStyle != 0) {
+        if (mImmersiveModeStyle != IMMERSIVE_MODE_OFF) {
             vis |= FLAG_FULLSCREEN;
         }
         return vis;
     }
 
     private boolean immersiveModeHidesNavigationBar() {
-        return mImmersiveModeStyle == 1 || mImmersiveModeStyle == 2;
+        return mImmersiveModeStyle == IMMERSIVE_MODE_FULL || mImmersiveModeStyle == IMMERSIVE_MODE_HIDE_ONLY_NAVBAR;
     }
 
     private boolean immersiveModeHidesStatusBar() {
-        return mImmersiveModeStyle == 1 || mImmersiveModeStyle == 3;
+        return mImmersiveModeStyle == IMMERSIVE_MODE_FULL || mImmersiveModeStyle == IMMERSIVE_MODE_HIDE_ONLY_STATUSBAR;
     }
 
     private void offsetInputMethodWindowLw(WindowState win) {
@@ -4066,7 +4109,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             case KeyEvent.KEYCODE_POWER: {
                 result &= ~ACTION_PASS_TO_USER;
                 if (down) {
-                    if (mImmersiveModeStyle == 0) {
+                    if (mImmersiveModeStyle == IMMERSIVE_MODE_OFF) {
                         mImmersiveModeConfirmation.onPowerKeyDown(isScreenOn, event.getDownTime(),
                                 isImmersiveMode(mLastSystemUiFlags));
                     }
@@ -5211,14 +5254,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             mClearedBecauseOfForceShow = false;
         }
 
-        int visibility = updateSystemBarsLw(win, mLastSystemUiFlags, tmpVisibility);
-        final int diff = visibility ^ mLastSystemUiFlags;
-        final boolean needsMenu = win.getNeedsMenuLw(mTopFullscreenOpaqueWindowState);
-        if (diff == 0 && mLastFocusNeedsMenu == needsMenu
-                && mFocusedApp == win.getAppToken()) {
-            return 0;
-        }
-
         // The window who requested navbar force showing disappeared and next window wants
         // to hide navbar. Instead of hiding we will make it transient. SystemUI will take care
         // about hiding after timeout. This should not happen if next window is keyguard because
@@ -5228,6 +5263,14 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             mNavigationBarController.showTransient();
             tmpVisibility |= View.NAVIGATION_BAR_TRANSIENT;
             mWindowManagerFuncs.addSystemUIVisibilityFlag(View.NAVIGATION_BAR_TRANSIENT);
+        }
+
+        int visibility = updateSystemBarsLw(win, mLastSystemUiFlags, tmpVisibility);
+        final int diff = visibility ^ mLastSystemUiFlags;
+        final boolean needsMenu = win.getNeedsMenuLw(mTopFullscreenOpaqueWindowState);
+        if (diff == 0 && mLastFocusNeedsMenu == needsMenu
+                && mFocusedApp == win.getAppToken()) {
+            return 0;
         }
 
         final int visibility2 = visibility;
@@ -5318,7 +5361,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         boolean oldImmersiveMode = isImmersiveMode(oldVis);
         boolean newImmersiveMode = isImmersiveMode(vis);
         if (win != null && oldImmersiveMode != newImmersiveMode) {
-            final String pkg = mImmersiveModeStyle != 0 ? "android" + mImmersiveModeStyle
+            final String pkg = mImmersiveModeStyle != IMMERSIVE_MODE_OFF ? "android" + mImmersiveModeStyle
                     : win.getOwningPackage();
             mImmersiveModeConfirmation.immersiveModeChanged(pkg, newImmersiveMode,
                     transientStatusBarAllowed);

@@ -45,14 +45,16 @@
     <string name="screenshot_delete_action">Delete</string>
     <string name="screenshot_delete_confirmation">Screenshot deleted.</string>
 
-    <!-- QuickSettings tile: Immersive mode -->
-    <!-- 快捷设置磁贴: 沉浸模式 -->
-    <string name="quick_settings_immersive_mode_full_label">Immersive</string>
-    <!-- QuickSettings tile: Immersive mode (Off) -->
-    <!-- 快捷设置磁贴: 沉浸模式 (关) -->
-    <string name="quick_settings_immersive_mode_off_label">Immersive Off</string>
+    <!-- QuickSettings tile: Immersive global mode -->
+    <!-- 快捷设置磁贴: 全局沉浸模式 -->
+    <string name="quick_settings_immersive_global_on_label">Immersive</string>
+    <!-- QuickSettings tile: Immersive global mode (Off) -->
+    <!-- 快捷设置磁贴: 全局沉浸模式 (关) -->
+    <string name="quick_settings_immersive_global_off_label">Immersive Off</string>
     <!-- QuickSettings tile: Immersive mode extra -->
     <!-- 快捷设置磁贴: 进阶沉浸模式 -->
+    <string name="quick_settings_immersive_mode_off_label">Disabled</string>
+    <string name="quick_settings_immersive_mode_full_label">Full</string>
     <string name="quick_settings_immersive_mode_no_status_bar_label">Navigation bar</string>
     <string name="quick_settings_immersive_mode_no_navigation_bar_label">Status bar</string>
     <!-- QuickSettings tile: Sleep -->
@@ -85,7 +87,7 @@
     <string name="quick_settings_network_type">Network</string>
     <string name="quick_settings_network_unknown">Unknown</string>
     <string name="quick_settings_network_disabled">Disabled</string>
-    <string name="quick_settings_network_toast_disabled">Remove Google dialer to enable network tile</string>
+    <string name="quick_settings_network_toast_disabled">Network settings are not available</string>
     <!-- QuickSettings tile: Lightbulb -->
     <!-- 快捷设置磁贴: Lightbulb -->
     <string name="quick_settings_lightbulb_label">Lightbulb</string>
@@ -104,5 +106,12 @@
     <string name="quick_settings_location_mode_high_label">High</string>
     <string name="quick_settings_location_mode_battery_label">Battery</string>
     <string name="quick_settings_location_mode_sensors_label">Device</string>
+    <!-- QuickSettings tile: Sound -->
+    <!-- 快捷设置磁贴: 声音 -->
+    <string name="quick_settings_ringer_mode_silent_label">Silent</string>
+    <string name="quick_settings_ringer_mode_vibrate_label">Vibrate</string>
+    <string name="quick_settings_ringer_mode_normal_label">Sound</string>
+    <string name="quick_settings_ringer_mode_normal_vibrate_label">Sound &amp; Vibration</string>
+    <string name="quick_settings_volume_label">Volume</string>
 
 </resources>

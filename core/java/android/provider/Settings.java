@@ -2465,6 +2465,13 @@ public final class Settings {
         public static final String IMMERSIVE_MODE = "immersive_mode";
 
         /**
+         * Store last immersive state to persist through reboot
+         * 将沉浸模式状态储存为系统变量以便能在重启后不改变状态
+         * @hide
+         */
+        public static final String IMMERSIVE_LAST_ACTIVE_STATE = "immersive_last_active_state";
+
+        /**
          * Quick settings tiles to show on status bar
          * 快捷设置面板磁贴
          * @hide
