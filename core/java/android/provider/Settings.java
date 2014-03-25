@@ -2546,6 +2546,34 @@ public final class Settings {
         public static final String AOSP_DIALER = "aosp_dialer";
 
         /**
+         * Enable glow pad double tap gesture on to put device to sleep
+         * 开启双击光圈锁屏的手势
+         * @hide
+         */
+        public static final String DOUBLE_TAP_SLEEP_GLOW_PAD = "double_tap_sleep_glow_pad";
+
+        /**
+         * Enable pattern double tap gesture to put device to sleep
+         * 开启双击图案盘的手势
+         * @hide
+         */
+        public static final String DOUBLE_TAP_SLEEP_PATTERN = "double_tap_sleep_pattern";
+
+        /**
+         * Enable pin password double tap gesture to put device to sleep
+         * 开启双击密码输入框锁屏的手势
+         * @hide
+         */
+        public static final String DOUBLE_TAP_SLEEP_PIN_PASSWORD = "double_tap_sleep_pin_password";
+
+        /**
+         * Enable status bar double tap gesture to put device to sleep
+         * 开启双击通知栏锁屏的手势
+         * @hide
+         */
+        public static final String DOUBLE_TAP_SLEEP_STATUS_BAR = "double_tap_sleep_status_bar";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
