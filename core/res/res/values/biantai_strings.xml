@@ -74,4 +74,7 @@
     <!-- 沉浸模式确认: 当通知栏可见时 确认窗口会从屏幕下端弹出 -->
     <string name="immersive_mode_confirmation_bottom">Swipe up from the bottom to exit full screen.</string>
 
+    <!-- Longpress back button to kill foreground app -->
+    <string name="app_killed_message">App killed</string>
+
 </resources>

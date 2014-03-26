@@ -44,4 +44,8 @@
     <!-- 闪光灯 -->
     <bool name="config_device_has_camera_flash">false</bool>
 
+    <!-- The timeout you have to longpress the back button for to kill the foreground app. -->
+    <!-- 杀掉前台应用时需长按返回键达到此延时时长. -->
+    <integer name="config_backKillTimeout">2000</integer>
+
 </resources>

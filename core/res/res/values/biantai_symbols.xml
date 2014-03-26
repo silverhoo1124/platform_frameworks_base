@@ -59,4 +59,12 @@
   <!-- 闪光灯 -->
   <java-symbol type="bool" name="config_device_has_camera_flash" />
 
+  <!-- config.xml entries -->
+  <!-- config.xml中的条目 -->
+  <java-symbol type="integer" name="config_backKillTimeout" />
+
+  <!-- Developer settings - longpress back button to kill foreground app -->
+  <!-- 开发者选项 - 长按返回键杀掉前台应用 -->
+  <java-symbol type="string" name="app_killed_message" />
+
 </resources>
