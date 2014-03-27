@@ -1977,6 +1977,20 @@ public final class Settings {
             "notifications_use_ring_volume";
 
         /**
+         * Battery warning preferences
+         * 电量提醒选项
+         * 
+         * 0 = show dialog + play sound (default) / 显示弹窗 + 播放声音 (默认)
+         * 1 = fire notification + play sound / 触发通知 + 播放声音
+         * 2 = show dialog only / 仅显示弹窗
+         * 3 = fire notification only / 仅触发通知
+         * 4 = play sound only / 仅播放声音
+         * 5 = do nothing / 神马都木有
+         * @hide
+         */
+        public static final String POWER_UI_LOW_BATTERY_WARNING_POLICY = "power_ui_low_battery_warning_policy";
+
+        /**
          * Whether silent mode should allow vibration feedback. This is used
          * internally in AudioService and the Sound settings activity to
          * coordinate decoupling of vibrate and silent modes. This setting
