@@ -2585,6 +2585,13 @@ public final class Settings {
         };
 
         /**
+         * Lockscreen targets customization
+         * 个性化锁屏目标
+         * @hide
+         */
+        public static final String LOCKSCREEN_TARGETS = "lockscreen_targets";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
