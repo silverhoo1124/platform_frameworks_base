@@ -55,16 +55,29 @@
   <java-symbol type="string" name="reboot_confirm" />
   <java-symbol type="string" name="reboot_progress" />
 
-  <!-- Camera flash -->
-  <!-- 闪光灯 -->
+  <!-- config.xml entries for camera flash check -->
+  <!-- config.xml中闪光灯检测的条目 -->
   <java-symbol type="bool" name="config_device_has_camera_flash" />
 
-  <!-- config.xml entries -->
-  <!-- config.xml中的条目 -->
+  <!-- config.xml entries for foreground app kill -->
+  <!-- config.xml中杀掉前台应用的条目 -->
   <java-symbol type="integer" name="config_backKillTimeout" />
-
   <!-- Developer settings - longpress back button to kill foreground app -->
   <!-- 开发者选项 - 长按返回键杀掉前台应用 -->
   <java-symbol type="string" name="app_killed_message" />
+
+  <!-- Navigation ring targets customization -->
+  <!-- 个性化导航圈目标 -->
+  <java-symbol type="drawable" name="ic_navigation_ring_blank_normal" />
+  <java-symbol type="drawable" name="ic_navigation_ring_blank_activated" />
+  <java-symbol type="drawable" name="ic_navigation_ring_empty" />
+  <java-symbol type="drawable" name="ic_navigation_ring_ime_switcher" />
+  <java-symbol type="drawable" name="ic_navigation_ring_killtask" />
+  <java-symbol type="drawable" name="ic_navigation_ring_power" />
+  <java-symbol type="drawable" name="ic_navigation_ring_screenshot" />
+  <java-symbol type="drawable" name="ic_navigation_ring_silent" />
+  <java-symbol type="drawable" name="ic_navigation_ring_sound_on" />
+  <java-symbol type="drawable" name="ic_navigation_ring_vibrate" />
+  <java-symbol type="drawable" name="ic_navigation_ring_power_menu" />
 
 </resources>
