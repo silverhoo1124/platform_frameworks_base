@@ -80,4 +80,8 @@
   <java-symbol type="drawable" name="ic_navigation_ring_vibrate" />
   <java-symbol type="drawable" name="ic_navigation_ring_power_menu" />
 
+  <!-- LED customization -->
+  <!-- 个性化LED -->
+  <java-symbol type="array" name="notification_light_package_mapping" />
+
 </resources>

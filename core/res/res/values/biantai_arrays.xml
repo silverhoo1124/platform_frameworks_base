@@ -64,4 +64,15 @@
         <item>@drawable/ic_lock_reboot_bootloader</item>
     </array>
 
+    <!-- Defines the mapping of notification package names
+         from the actual triggering package to the user selectable package.
+         E.g. Hangouts notifications come via Google Services Framework
+         Format: [triggering package]|[user package] -->
+    <!-- 定义了通知包名的映射, 从真正触发通知的包, 到用户可选择的包.
+         栗子: 环聊的通知实际上来自谷歌服务框架
+         格式: 触发包|用户包 -->
+    <string-array name="notification_light_package_mapping" translatable="false">
+        <item>com.google.android.gsf|com.google.android.talk</item>
+    </string-array>
+
 </resources>
