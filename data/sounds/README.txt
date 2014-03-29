@@ -1,33 +1,35 @@
-This README describes the audio assets, and how they relate to each other.
+The sounds have been properly refreshed
 
-The product .mk references one of the AudioPackage*.mk,
-which installs the appropriate assets into the destination directory.
 
-For UI sound effects,
-frameworks/base/media/java/android/media/AudioService.java array
-SOUND_EFFECT_FILES contains a hard-coded list of asset filenames, stored
-in directory SOUND_EFFECTS_PATH.
+Regarding the build:
+* Remove all confusing and bloating AudioPackage*.mk but AllAudio.mk.
+* Modify generate-all-audio.sh and AllAudio.mk to copy sounds into
+    build in a more intuitive PRODUCT_COPY_FILES step.
 
-Touch sounds
-------------
+Regarding the sounds:
+* Reorganize all sounds.
+* Remove only the ancient and dead ones.
+* Use KitKat ui sounds.
+* Relocate sounds in /newwavelabs into their proper category
+    according to AudioPackage*.mk.
+* Remove smaller ones for the duplicates
+    as they are expected to have relatively poor quality.
 
-effects/Effect_Tick.ogg
-  old, referenced by AudioPackage[2345].mk OriginalAudio.mk
 
-effects/ogg/Effect_Tick.ogg
-  new, referenced by AudioPackage[6789].mk AudioPackage7alt.mk AudioPackage10.mk
 
-effects/ogg/Effect_Tick_48k.ogg
-  oggdec -o temp.wav ogg/Effect_Tick.ogg
-  sox temp.wav -r 48000 temp48k.wav
-  oggenc -b 80 -o ogg/Effect_Tick_48k.ogg temp48k.wav
+声音已经过大换血
 
-effects/wav/Effect_Tick.wav
-  does not appear to be related to the other files in any obvious way
 
-Video recording
----------------
+关于编译:
+* 删除所有复杂且累赘的AudioPackage*.mk仅保留AllAudio.mk.
+* 修改generate-all-audio.sh和AllAudio.mk
+    将声音以一个更直观的PRODUCT_COPY_FILES步骤复制进包中.
 
-./effects/ogg/VideoStop_48k.ogg
-  unused
-
+关于声音:
+* 重新整理所有声音.
+* 删除过时严重的和不再使用的声音.
+* 使用KitKat的ui声音.
+* 将newwavelabs目录中的根据AudioPackage*.mk
+    中定义的类别分放进各自的目录.
+* 删除尺寸较小的重复声音
+    因为他们相对音质差一些.
