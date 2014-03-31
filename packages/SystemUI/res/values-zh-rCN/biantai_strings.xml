@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+                         $$$$$$$$$$$$$$$
+                      $$$$$$        $$  $$$$
+                     $$$             $     $$$
+                   $$$$$$$          $$$      $$$
+                  $$$$ $$$$        $$          $$$
+                 $$$      $$       $            $$$
+     FFFF       $$$$     $$                $$$    $$
+    UUUUUU     $$$  $$$$$$              $$$$$$$$$  $$
+               $$$                     $$     $$$  $$
+               $$    $$$$$$$$$         $$      $$  $$
+                $$ $$  $$$ $$$$$$$$$     $$$$$$    $$
+                 $ $$      $$$  $$  $$$           $$
+  $$$             $$$              $$  $$        $$$
+   $$$$             $$$$$$$            $$      $$$
+ $$$$$$$$$$$         $$$  $$$$$       $$     $$$$
+    $$$  $$$$$$$$$   $$$     $$$$$   $$  $$$$$
+  $$$$        $$$$$$$$$$$$$$$    $$$$$$$$$$$$
+ $$$$               $$$     $$$$$$$$$$$
+      $$           $$$            $$$
+        $$        $$$            $$$
+        $$$$$$$$$$$$$$$$$$       $$$
+     $$$$$$$$     $$$$$$$$$$$$$  $$
+        $$$$      $$$            $$
+       $$$        $$            $$$
+                  $$            $$$
+                  $$$$$$$$$$$$$$$$$
+                   $$$$$$$$$$$$$$$
+                     $$$       $$$
+                    $$$         $$$
+                   $$$           $$$
+                  $$$             $$$
+                 $$$               $$$
+                $$$                 $$$
+               $$$                   $$$
+            $$$$$                    $$$$
+           $$$$$$                    $$$
+                                   $$$$
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Screenshot quick delete -->
+    <!-- 快速删除屏幕截图 -->
+    <string name="screenshot_delete_action">删除</string>
+    <string name="screenshot_delete_confirmation">屏幕截图已删除</string>
+
+    <!-- QuickSettings tile: Immersive global mode -->
+    <!-- 快捷设置磁贴: 全局沉浸模式 -->
+    <string name="quick_settings_immersive_global_on_label">沉浸模式</string>
+    <!-- QuickSettings tile: Immersive global mode (Off) -->
+    <!-- 快捷设置磁贴: 全局沉浸模式 (关) -->
+    <string name="quick_settings_immersive_global_off_label">沉浸模式: 关闭</string>
+    <!-- QuickSettings tile: Immersive mode extra -->
+    <!-- 快捷设置磁贴: 进阶沉浸模式 -->
+    <string name="quick_settings_immersive_mode_off_label">禁用</string>
+    <string name="quick_settings_immersive_mode_full_label">全屏</string>
+    <string name="quick_settings_immersive_mode_no_status_bar_label">导航栏</string>
+    <string name="quick_settings_immersive_mode_no_navigation_bar_label">通知栏</string>
+    <!-- QuickSettings tile: Sleep -->
+    <!-- 快捷设置磁贴: 锁屏 -->
+    <string name="quick_settings_sleep_action_label">锁屏</string>
+    <string name="quick_settings_sleep_time_15_label">15 秒</string>
+    <string name="quick_settings_sleep_time_30_label">30 秒</string>
+    <string name="quick_settings_sleep_time_60_label">60 秒</string>
+    <string name="quick_settings_sleep_time_120_label">2 秒</string>
+    <string name="quick_settings_sleep_time_300_label">5 秒</string>
+    <string name="quick_settings_sleep_time_600_label">10 秒</string>
+    <string name="quick_settings_sleep_time_1800_label">30 秒</string>
+    <string name="quick_settings_sleep_time_unknown_label">@string/quick_settings_network_unknown</string>
+    <!-- QuickSettings tile: USB tether -->
+    <!-- 快捷设置磁贴: USB共享网络 -->
+    <string name="quick_settings_usb_tether_connected_label">USB 共享网络: 关闭</string>
+    <string name="quick_settings_usb_tether_on_label">USB 共享网络</string>
+    <!-- QuickSettings tile: Battery -->
+    <!-- 快捷设置磁贴: 电池 -->
+    <string name="quick_settings_battery_charging">充电中</string>
+    <string name="quick_settings_battery_discharging">未充电</string>
+    <!-- QuickSettings tile: LTE on -->
+    <!-- 快捷设置磁贴: LTE开启 -->
+    <string name="quick_settings_lte">LTE</string>
+    <!-- QuickSettings tile: LTE off -->
+    <!-- 快捷设置磁贴: LTE关闭 -->
+    <string name="quick_settings_lte_off">LTE: 关闭</string>
+    <!-- QuickSettings tile: Mobile network (2G/3G) -->
+    <!-- 快捷设置磁贴: 蜂窝数据 (2G/3G) -->
+    <string name="quick_settings_network_type">网络制式</string>
+    <string name="quick_settings_network_unknown">未知</string>
+    <string name="quick_settings_network_disabled">禁用</string>
+    <string name="quick_settings_network_toast_disabled">网络制式设置不可用</string>
+    <!-- QuickSettings tile: Lightbulb -->
+    <!-- 快捷设置磁贴: Lightbulb -->
+    <string name="quick_settings_lightbulb_label">手电筒</string>
+    <string name="quick_settings_lightbulb_off_label">手电筒: 关闭</string>
+    <!-- QuickSettings tile: Wifi AP -->
+    <!-- 快捷设置磁贴: Wifi热点 -->
+    <string name="quick_settings_wifi_ap_label">Wi-Fi 热点</string>
+    <string name="quick_settings_wifi_ap_off_label">Wi-Fi 热点: 关闭</string>
+    <!-- QuickSettings tile: Bluetooth extra -->
+    <!-- 快捷设置磁贴: 进阶蓝牙状态 -->
+    <string name="quick_settings_bluetooth_not_discoverable_label">不可见</string>
+    <string name="quick_settings_bluetooth_discoverable_label">可见</string>
+    <string name="quick_settings_bluetooth_disabled">禁用</string>
+    <!-- QuickSettings tile: Location extra -->
+    <!-- 快捷设置磁贴: 进阶位置状态 -->
+    <string name="quick_settings_location_mode_high_label">准确度高</string>
+    <string name="quick_settings_location_mode_battery_label">耗电量低</string>
+    <string name="quick_settings_location_mode_sensors_label">仅限设备</string>
+    <!-- QuickSettings tile: Sound -->
+    <!-- 快捷设置磁贴: 声音 -->
+    <string name="quick_settings_ringer_mode_silent_label">静音</string>
+    <string name="quick_settings_ringer_mode_vibrate_label">振动</string>
+    <string name="quick_settings_ringer_mode_normal_label">响铃</string>
+    <string name="quick_settings_ringer_mode_normal_vibrate_label">响铃 &amp; 振动</string>
+    <string name="quick_settings_volume_label">音量</string>
+
+</resources>
