@@ -48,4 +48,12 @@
     <!-- 杀掉前台应用时需长按返回键达到此延时时长. -->
     <integer name="config_backKillTimeout">2000</integer>
 
+    <!-- The duration (in milliseconds) of recent panel in animation -->
+    <!-- 最近应用面板滑入动画时长(毫秒) -->
+    <integer name="config_recentDefaultDur">300</integer>
+
+    <!-- The duration (in milliseconds) of recent panel out animation -->
+    <!-- 最近应用面板滑出动画时长(毫秒) -->
+    <integer name="config_recentExitDur">450</integer>
+
 </resources>

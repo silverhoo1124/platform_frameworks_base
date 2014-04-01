@@ -282,4 +282,11 @@ interface IWindowManager
      * @param enabled Whether touch exploration is enabled.
      */
     void setTouchExplorationEnabled(boolean enabled);
+
+    /**
+     * Get current SystemUI visibility mode.
+     * 获取当前SystemUI的可见模式.
+     * @hide
+     */
+    int getSystemUIVisibility();
 }

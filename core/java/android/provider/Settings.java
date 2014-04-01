@@ -2676,6 +2676,38 @@ public final class Settings {
         public static final String SAFE_HEADSET_VOLUME = "safe_headset_volume";
 
         /**
+         * Whether recent panel gravity is left or right (default = Gravity.RIGHT)
+         * 定义最近应用面板从左侧或者右侧滑出(默认为右侧)
+         * @hide
+         */
+        public static final String RECENT_PANEL_GRAVITY = "recent_panel_gravity";
+
+        /**
+         * Size of recent panel view in percent (default = 100)
+         * 最近应用面板尺寸百分比(默认为100%)
+         * @hide
+         */
+        public static final String RECENT_PANEL_SCALE_FACTOR = "recent_panel_scale_factor";
+
+        /**
+         * User favorite tasks for recent panel
+         * 最近应用面板中用户加星标的任务
+         * @hide
+         */
+        public static final String RECENT_PANEL_FAVORITES = "recent_panel_favorites";
+
+        /**
+         * Recent panel expanded mode
+         * 最近应用面板展开模式
+         * auto/自动 = 0 
+         * always/总是展开 = 1
+         * never/总是折叠 = 2
+         * Default/默认 = 0
+         * @hide
+         */
+        public static final String RECENT_PANEL_EXPANDED_MODE = "recent_panel_expanded_mode";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
