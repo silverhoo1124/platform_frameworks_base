@@ -16,8 +16,6 @@
 ** limitations under the License.
 */
 -->
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <color android:color="#161616" />
-    </item>
-</selector>
+ <shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/black" />
+ </shape>
