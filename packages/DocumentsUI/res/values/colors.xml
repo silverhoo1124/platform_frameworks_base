@@ -15,7 +15,7 @@
 -->
 
 <resources>
-    <color name="chip">#ddd</color>
-    <color name="item_root_pressed">#33cccccc</color>
-    <color name="item_root_focused">#66cccccc</color>
+    <color name="chip">#222</color>
+    <color name="item_root_pressed">#33333333</color>
+    <color name="item_root_focused">#66333333</color>
 </resources>
