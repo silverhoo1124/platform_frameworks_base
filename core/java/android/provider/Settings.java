@@ -2715,6 +2715,19 @@ public final class Settings {
         public static final String CALL_UI_IN_BACKGROUND = "call_ui_in_background";
 
         /**
+         * Whether flip action mutes or declines an incoming call
+         * 0 = Mute call
+         * 1 = Decline call
+         * 2 = Do nothing
+         * 定义翻转动作是否会静音或者挂断来电
+         * 0 = 静音来电
+         * 1 = 挂断来电
+         * 2 = 啥也不干
+         * @hide
+         */
+        public static final String CALL_FLIP_ACTION_KEY = "call_flip_action_key";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
