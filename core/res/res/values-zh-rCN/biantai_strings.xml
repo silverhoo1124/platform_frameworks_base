@@ -56,25 +56,25 @@
     <!-- Button to reboot the device into fastboot, within the reboot options dialog -->
     <!-- "重新启动"对话框中的重启至Fastboot模式按钮 -->
     <string name="reboot_fastboot">引导模式</string>
-
-    <!-- Reboot confirmation dialog title -->
-    <!-- 确认重启的对话框标题 -->
-    <string name="reboot_system" product="tablet">重启 Nexus</string>
-    <string name="reboot_system" product="default">重启 Nexus</string>
-    <!-- Reboot confirmation dialog.  This is the message shown to the user when he chooses to reboot the device -->
+    <!-- Reboot confirmation dialog text -->
     <!-- 确认重启的对话框文字 -->
     <string name="reboot_confirm" product="tablet">你的Nexus将重新启动</string>
     <string name="reboot_confirm" product="default">你的Nexus将重新启动</string>
-
-    <!-- Reboot progress dialog. This is shown if the user chooses to reboot the device. -->
-    <!-- 确认重启后, 重启过程中弹出的对话框文字 -->
+    <!-- Reboot progress dialog text -->
+    <!-- 重启过程的对话框文字 -->
     <string name="reboot_progress">正在重新启动...\u2026</string>
+
+    <!-- Shutdown confirmation dialog text -->
+    <!-- 确认关机的对话框文字 -->
+    <string name="shutdown_confirm" product="tablet">你的Nexus将关机</string>
+    <string name="shutdown_confirm" product="default">你的Nexus将关机</string>
 
     <!-- Immersive mode confirmation: Pick confirmation window from bottom when status bar is visible -->
     <!-- 沉浸模式确认: 当通知栏可见时 确认窗口会从屏幕下端弹出 -->
     <string name="immersive_mode_confirmation_bottom">从底部滑出以退出全屏</string>
 
     <!-- Longpress back button to kill foreground app -->
+    <!-- 长按返回按钮以杀掉前台应用 -->
     <string name="app_killed_message">应用的人头给你带来了</string>
 
 </resources>
