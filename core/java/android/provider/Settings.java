@@ -2728,6 +2728,13 @@ public final class Settings {
         public static final String CALL_FLIP_ACTION_KEY = "call_flip_action_key";
 
         /**
+         * QuickSettings panel quick pulldown
+         * 快捷设置面板快速下拉
+         * @hide
+         */
+        public static final String QS_QUICK_PULLDOWN = "qs_quick_pulldown";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
