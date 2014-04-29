@@ -77,4 +77,10 @@
     <!-- 长按返回按钮以杀掉前台应用 -->
     <string name="app_killed_message">App killed</string>
 
+    <!-- Setting confirmation dialog -->
+    <!-- 设置确认对话框 -->
+    <string name="setting_confirmation_ask_me_later">Ask later</string>
+    <string name="setting_confirmation_yes">Yes</string>
+    <string name="setting_confirmation_no">No</string>
+
 </resources>

@@ -2735,6 +2735,37 @@ public final class Settings {
         public static final String QS_QUICK_PULLDOWN = "qs_quick_pulldown";
 
         /**
+         * Pie control panel
+         * 派控制面板
+         * 0 = off/关闭
+         * 1 = on/开启
+         * Changes aspect depends on notification bar visibility
+         * 随通知栏的可见与否而改变
+         * @hide
+         */
+        public static final String PIE_STATE = "pie_state";
+
+        /**
+         * Used by PhoneWindowManager to tell pie which mode to use depending on whether navigation/notification bar is hidden
+         * 被PhoneWindowManager用来根据通知栏/导航栏是否被隐藏而决定Pie采用的模式
+         * 0 = off/关闭
+         * 1 = simple/简单
+         * 2 = full/完整
+         * @hide
+         */
+        public static final String PIE_MODE = "pie_mode";
+
+        /**
+         * Location of the pie on the screen
+         * 派在屏幕上的位置
+         * 0 = bottom (default)/下部(默认)
+         * 1 = left/左部
+         * 2 = right/右部
+         * @hide
+         */
+        public static final String PIE_GRAVITY = "pie_gravity";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -2801,6 +2832,16 @@ public final class Settings {
             INCREASING_RING,
             RINGTONE,
             NOTIFICATION_SOUND
+        };
+
+        /**
+         * Settings to reset on user choice. They will fall back to their default value (0)
+         * 根据用户的选择而重置的设置项. 他们会回到默认值(0)
+         * 
+         * @hide
+         */
+        public static final String[] SETTINGS_TO_RESET = {
+            PIE_STATE
         };
 
         // Settings moved to Settings.Secure
