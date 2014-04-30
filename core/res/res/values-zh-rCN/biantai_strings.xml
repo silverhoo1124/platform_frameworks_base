@@ -77,4 +77,10 @@
     <!-- 长按返回按钮以杀掉前台应用 -->
     <string name="app_killed_message">应用的人头给你带来了</string>
 
+    <!-- Setting confirmation dialog -->
+    <!-- 设置确认对话框 -->
+    <string name="setting_confirmation_ask_me_later">稍候询问</string>
+    <string name="setting_confirmation_yes">是</string>
+    <string name="setting_confirmation_no">否</string>
+
 </resources>
