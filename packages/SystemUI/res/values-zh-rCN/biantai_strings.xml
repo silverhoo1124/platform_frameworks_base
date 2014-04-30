@@ -114,4 +114,14 @@
     <string name="quick_settings_ringer_mode_normal_vibrate_label">响铃 &amp; 振动</string>
     <string name="quick_settings_volume_label">音量</string>
 
+    <!-- Pie -->
+    <!-- 派 -->
+    <string name="pie_date_format">yyyy年 MMM dd日, ccc</string>
+    <string name="pie_hour_format_12">hh:mm</string>
+    <string name="pie_hour_format_24">HH:mm</string>
+    <string name="pie_am_pm">a</string>
+    <string name="enable_pie_control_title">Pie 控制</string>
+    <string name="enable_pie_control_message">是否在沉浸模式中开启Pie 控制?</string>
+    <string name="pie_state">@string/enable_pie_control_title</string>
+
 </resources>
